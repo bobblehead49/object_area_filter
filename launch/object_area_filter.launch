@@ -1,0 +1,17 @@
+<launch>
+    <arg name="objects_in" default="/objects_in" />
+    <arg name="objects_out" default="/objects_out" />
+    <arg name="transform_objects" default="false" />
+    <arg name="include_in_area" default="true" />
+    <arg name="areas_yaml_path" default="$(find object_area_filter)/config/areas.yaml" />
+    <arg name="node_name" default="object_area_filter" />
+    <arg name="output" default="screen" />
+
+    <node pkg="object_area_filter" type="object_area_filter_node" name="$(arg node_name)" output="$(arg output)">
+        <param name="objects_in" value="$(arg objects_in)" />
+        <param name="objects_out" value="$(arg objects_out)" />
+        <param name="transform_objects" value="$(arg transform_objects)" />
+        <param name="include_in_area" value="$(arg include_in_area)" />
+        <rosparam command="load" file="$(arg areas_yaml_path)" />
+    </node>
+</launch>

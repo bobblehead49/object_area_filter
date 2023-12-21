@@ -1,0 +1,17 @@
+<package format="2">
+  <name>object_area_filter</name>
+  <version>0.0.0</version>
+  <description>The object_area_filter package</description>
+
+  <maintainer email="kosuke@todo.todo">kk</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_geometry_msgs</depend>
+  <depend>object_msgs</depend>
+  <depend>point_in_polygon_lib</depend>
+
+</package>
